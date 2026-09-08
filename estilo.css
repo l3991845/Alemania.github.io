@@ -1,0 +1,167 @@
+.imagen-fija {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 75px;
+    height: 75px;
+    z-index: 1000;
+}
+
+.titulo{
+    text-align: center;
+    padding: 5px 10px;
+    background: linear-gradient(to bottom, rgb(82, 82, 82) 33.3%, rgb(248, 107, 107) 33.3% 66.6%, rgb(252, 245, 146) 66.6%);
+}
+.indice-lineal {
+    text-align: center;
+    list-style: none;    /* Quita los puntos de la lista */
+    padding: 0;          /* Quita el espacio izquierdo */
+    display: flex;       /* Alinea los elementos en un mismo renglón */
+    gap: 15px;           /* Añade separación entre cada enlace */
+}
+
+img {
+    width: 250px;
+    height: 250px;
+    border: 5px solid white;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.8s ease, width 0.8s ease, height 0.8s ease;
+}
+
+
+/* Efecto al pasar el mouse */
+
+img:hover {
+    animation: flotar 1s ease-in-out infinite;
+}
+
+
+/* Imagen abierta */
+
+.imagen-galeria.abierta {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+
+    width: 90vw;
+    height: 90vh;
+
+    object-fit: contain;
+
+    transform: translate(-50%, -50%) rotate(360deg) scale(1.1);
+
+    z-index: 9999;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.8);
+
+    animation: abrirImagen 0.8s ease-in-out forwards;
+}
+
+
+/* Animación de apertura */
+
+@keyframes abrirImagen {
+
+    0% {
+        transform: translate(-50%, -50%) scale(0.3) rotate(0deg);
+    }
+
+    60% {
+        transform: translate(-50%, -50%) scale(1.15) rotate(360deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.1) rotate(360deg);
+    }
+
+}
+
+
+/* Animación de flotación */
+
+@keyframes flotar {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+body{
+    background-color: rgb(145, 159, 179);
+}
+
+.galeria-comidas {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.comida {
+    text-align: center;
+    width: 250px;
+}
+
+.comida p {
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.galeria-festividad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.elemento-galeria {
+    text-align: center;
+}
+
+.elemento-galeria p {
+    margin-top: 8px;
+    font-weight: bold;
+}
+
+.festividad {
+    text-align: center;
+    width: 250px;
+}
+
+.galeria-vestimenta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.vestimenta {
+    text-align: center;
+    width: 250px;
+}
+
+.galeria-geografia {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.geografia {
+    text-align: center;
+    width: 250px;
+}
